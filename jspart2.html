@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+    
+<h3>A demonstration of how to access a Date field</h3>
+
+<input type="date" id="myDate" type="yyyy-MM-dd ">
+
+<p>Click the button to see date.</p>
+
+<button onclick="myFunctionDate()">Show date</button>
+
+
+
+<p id="demo"></p>
+
+
+<script type="text/javascript"> 
+function myFunctionDate() {
+  var x = document.getElementById("myDate").value;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+<button onclick="displayDate()">click here to see time</button>
+
+<script>
+function displayDate() {
+  document.getElementById("dates").innerHTML = Date();
+}
+</script>
+<p id="dates"></p>
+
+<h3>checking the range of a number</h3>
+
+<input id="try" type="text">
+<button type="button" onclick="myFunctiontry()">Test Input</button>
+
+
+
+
+<script>
+/*function myFunction() {
+  var x = document.getElementById("myNumber").value;
+  if(x>10 && x<100)
+  {document.getElementById("numbers").innerHTML = x;
+}
+else
+{
+    document.getElementById("numbers").innerHTML = "the number is less than 10 or greater than 100";
+}
+}*/
+function myFunctiontry() {
+  var message, x;
+  message = document.getElementById("p1");
+  message.innerHTML = "";
+  x = document.getElementById("try").value;
+  try { 
+    if(x == "")  throw "empty";
+    if(x>10 && x<100) throw "In range of 10 and 100";
+    if(isNaN(x)) throw "not a number";
+    x = Number(x);
+    if(x < 10)  throw "too low";
+    if(x > 100)   throw "too high";
+  }
+  catch(err) {
+    message.innerHTML = "Input is " + err;
+  }
+}
+
+      
+    
+</script>
+
+<p id="p1"></p>
+
+
+<h3>Using Loops</h3>
+<script>
+var  i;
+var x=0;
+document.write("The Fibonacci series ");
+
+document.write("",x," ");
+var i,sum ,temp;
+var y=1;
+for(i=2;i<10;i++)
+{
+   sum=x+y;
+   document.write("",sum," ");
+   x=y;
+   
+   y=sum;
+
+ 
+
+}
+</script>
+<h2>JavaScript String Method to find words</h2>
+
+<h3>HTML is hypertext markup language it is used to  describe the structure of a Web page"</h3>
+
+<p>"The 5th word of the string is:")</p>
+<p id="word"></p>
+
+    
+    <script>
+       
+        var str = "HTML is hypertext markup language it is used to  describe the structure of a Web page" ;
+        var res = str.substr(24 ,9);
+        document.getElementById("word").innerHTML = res;
+        </script>
+
+
+
